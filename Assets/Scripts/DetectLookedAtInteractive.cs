@@ -17,7 +17,13 @@ public class DetectLookedAtInteractive : MonoBehaviour
     [SerializeField]
     private float maxRange = 5.0f;
 
-    //private Vector3 raycastDirection;
+    public IInteractive LookedAtInteractive
+    {
+        get { return lookedAtInteractive; }
+        private set { lookedAtInteractive = value; }
+    }
+
+    private IInteractive lookedAtInteractive;
 
     private void FixedUpdate()
     {
@@ -26,9 +32,17 @@ public class DetectLookedAtInteractive : MonoBehaviour
         RaycastHit hitInfo;
         bool objectWasDetected = Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hitInfo, maxRange);
 
+        IInteractive interactive = null;
+
+        LookedAtInteractive = interactive;
+
         if (objectWasDetected)
         {
-            Debug.Log($"Player is looking at: {hitInfo.collider.gameObject.name}");
+            //Debug.Log($"Player is looking at: {hitInfo.collider.gameObject.name}");
+            interactive = hitInfo.collider.gameObject.GetComponent<IInteractive>();
         }
+
+        if (interactive != null)
+            lookedAtInteractive = interactive;
     }
 }
