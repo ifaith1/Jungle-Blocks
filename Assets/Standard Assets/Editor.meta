@@ -1,6 +1,14 @@
 fileFormatVersion: 2
 guid: 8f7308500f322e644817ccfc3e0a17a5
 folderAsset: yes
+<<<<<<< Milestone-3
+timeCreated: 1436977287
+licenseType: Store
+DefaultImporter:
+=======
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> master
 timeCreated: 1436977287
 licenseType: Store
 DefaultImporter:
