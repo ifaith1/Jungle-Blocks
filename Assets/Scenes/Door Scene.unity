@@ -1053,7 +1053,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh13280
+  m_Name: pb_Mesh16706
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -2087,6 +2087,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayText: Door
+  isLocked: 1
+  lockedDisplayText: Locked
+  lockedAudioClip: {fileID: 8300000, guid: cf470c28524e346f7823ad8e80bcca8c, type: 3}
+  openAudioClip: {fileID: 8300000, guid: 4f35be4ad267844b89ed3678ea0051c7, type: 3}
 --- !u!82 &1340991478
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2512,7 +2516,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh13234
+  m_Name: pb_Mesh16656
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -2832,7 +2836,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh13184
+  m_Name: pb_Mesh14924
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
