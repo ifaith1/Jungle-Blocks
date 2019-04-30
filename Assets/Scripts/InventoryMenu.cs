@@ -8,6 +8,7 @@ public class InventoryMenu : MonoBehaviour
     private static InventoryMenu instance;
     private CanvasGroup canvasGroup;
     private RigidbodyFirstPersonController rigidbodyFirstPersonController;
+    private AudioSource audioSource;
     public static InventoryMenu Instance
     {
         get
@@ -22,6 +23,11 @@ public class InventoryMenu : MonoBehaviour
 
     private bool isVisible => canvasGroup.alpha > 0;
 
+    public void ExitMenuButtonClicked()
+    {
+        HideMenu();
+    }
+
 
     private void ShowMenu()
     {
@@ -30,6 +36,7 @@ public class InventoryMenu : MonoBehaviour
         rigidbodyFirstPersonController.enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        audioSource.Play();
     }
 
 
@@ -39,6 +46,7 @@ public class InventoryMenu : MonoBehaviour
         canvasGroup.interactable = false;
         Cursor.lockState = CursorLockMode.Locked;
         rigidbodyFirstPersonController.enabled = true;
+        audioSource.Play();
     }
 
     private void Update()
@@ -65,10 +73,24 @@ public class InventoryMenu : MonoBehaviour
 
         canvasGroup = GetComponent<CanvasGroup>();
         rigidbodyFirstPersonController = FindObjectOfType<RigidbodyFirstPersonController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
     {
         HideMenu();
+
+        StartCoroutine(WaitForAudioClip());
+        Debug.Log("We're not done waiting.");
+    }
+
+    private IEnumerator WaitForAudioClip()
+    {
+        float originalVolume = audioSource.volume;
+        audioSource.volume = 0;
+        Debug.Log("Start waiting.");
+        yield return new WaitForSeconds(audioSource.clip.length);
+        Debug.Log("Done waiting.");
+        audioSource.volume = originalVolume;
     }
 }
