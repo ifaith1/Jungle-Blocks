@@ -24,7 +24,7 @@ public class InventoryMenuItemToggle : MonoBehaviour
     private void Awake()
     {
         Toggle toggle = GetComponent<Toggle>();
-        ToggleGroup toggleGroup = GetComponent<ToggleGroup>();
+        ToggleGroup toggleGroup = GetComponentInParent<ToggleGroup>();
         toggle.group = toggleGroup;
     }
 }
