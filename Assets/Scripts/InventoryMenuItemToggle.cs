@@ -30,8 +30,6 @@ public class InventoryMenuItemToggle : MonoBehaviour
 
     public void InventoryMenuItemWasToggled(bool isOn)
     {
-        // We only want to do the stuff when the toggle has been selected. Not when it has been deselected.
-        //if (isOn)
         if (isOn)
             InventoryMenuItemSelected?.Invoke(AssociatedInventoryObject);
         Debug.Log($"Toggled: (isOn)");
