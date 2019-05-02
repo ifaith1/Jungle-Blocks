@@ -24,9 +24,7 @@ public class Door : InteractiveObject
     [Tooltip("Play this audio clip when the player opens the door")]
     [SerializeField]
     private AudioClip openAudioClip;
-
-    //public override string DisplayText => isLocked ? lockedDisplayText : base.DisplayText;
-
+    
     //This is an alternative way to express same logic as above
     public override string DisplayText
     {
