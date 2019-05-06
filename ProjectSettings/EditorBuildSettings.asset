@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InventoryMenuTest.unity
     guid: 9319bf316013d47eda5020069a9eb7b6
+  - enabled: 1
+    path: Assets/Scenes/HamsterHouse.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
