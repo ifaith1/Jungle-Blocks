@@ -38,4 +38,19 @@ public class OpenLink : MonoBehaviour
     {
         Application.OpenURL("https://assetstore.unity.com/packages/2d/textures-materials/floors/20-man-made-ground-materials-12835");
     }
+
+    public void OpenPortfolio()
+    {
+        Application.OpenURL("https://portfolium.com/ValerieVillarr");
+    }
+
+    public void OpenSceneCode()
+    {
+        Application.OpenURL("https://www.youtube.com/watch?v=tCe_UfyirT4&list=LLcaa5aBc7T81livbIONhRqQ&index=14&t=90s");
+    }
+
+    public void OpenHyperLink()
+    {
+        Application.OpenURL("https://www.youtube.com/watch?v=qqOqLNqAdDo");
+    }
 }
