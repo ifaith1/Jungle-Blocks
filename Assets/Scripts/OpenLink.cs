@@ -53,4 +53,9 @@ public class OpenLink : MonoBehaviour
     {
         Application.OpenURL("https://www.youtube.com/watch?v=qqOqLNqAdDo");
     }
+
+    public void OpenNature()
+    {
+        Application.OpenURL("https://assetstore.unity.com/publishers/21747");
+    }
 }
